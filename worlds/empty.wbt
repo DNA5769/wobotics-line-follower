@@ -14,8 +14,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.9139253093331989 0.39989933107709574 0.0694338099509763 0.23677305160412931
-  position 0.10866029842386063 0.21716036752018691 0.6508005448798605
+  orientation -0.7656272868376752 0.621327397601846 0.1666346981840748 0.6351723611965098
+  position 0.5427490180073458 0.7833299388122887 1.3303102640383204
 }
 TexturedBackground {
 }
@@ -30,7 +30,7 @@ RectangleArena {
   floorAppearance PBRAppearance {
     baseColorMap ImageTexture {
       url [
-        "C:/Users/Neeraj/Documents/project_working/protos/Arena_LineFollower.png"
+        "Arena_LineFollower.png"
       ]
     }
     metalness 0
