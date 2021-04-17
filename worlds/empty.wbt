@@ -37,8 +37,8 @@ RectangleArena {
   }
 }
 Robot {
-  translation -0.141928 0 0.258959
-  rotation 0 1 0 -1.3089953071795861
+  translation -0.14192800675859468 0.0006061442684835508 0.2589589747767459
+  rotation 1.3031044416347678e-05 0.9999999997708946 -1.6982416374027285e-05 -1.3089953074008833
   children [
     DistanceSensor {
       translation -0.03 0.02 0.042
@@ -92,7 +92,7 @@ Robot {
           }
         }
       ]
-      name "iro"
+      name "ir0"
       type "infra-red"
       numberOfRays 10
       aperture 0.1
@@ -115,6 +115,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position -4.8630524088517507e-17
         anchor 0.05 0.039 0
       }
       device [
@@ -124,7 +125,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.05 0.039 0
-        rotation 0 0 1 1.57
+        rotation -2.4334632652640407e-17 2.4315262044258753e-17 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -141,10 +142,13 @@ Robot {
         boundingObject USE wheel
         physics Physics {
         }
+        linearVelocity -2.1522969609300908e-09 4.704723891129376e-06 -8.032446961581389e-09
+        angularVelocity -2.006798303042519e-07 4.246351161300612e-16 5.37722321082666e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.236460169108222e-16
         anchor -0.05 0.039 0
       }
       device [
@@ -154,7 +158,7 @@ Robot {
       ]
       endPoint Solid {
         translation -0.050008 0.039 0
-        rotation 1.570717985582996e-16 0 1 1.57
+        rotation 2.1894405794440543e-16 -6.18230084554111e-17 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -170,6 +174,8 @@ Robot {
         boundingObject USE wheel
         physics Physics {
         }
+        linearVelocity -2.1495807110102307e-09 4.68435552635984e-06 -8.022309611105151e-09
+        angularVelocity -2.006798149715978e-07 4.2521563767326524e-16 5.377222780344056e-08
       }
     }
   ]
@@ -178,4 +184,6 @@ Robot {
   physics Physics {
   }
   controller "robotics_round_2"
+  linearVelocity -2.7419715703783685e-09 4.6460946860635544e-06 -1.0233133662891871e-08
+  angularVelocity -2.006700046386129e-07 7.71740767788464e-16 5.376959970070806e-08
 }
