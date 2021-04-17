@@ -29,19 +29,19 @@ if __name__ == "__main__":
         right = right_ir.getValue()>limit
         
         if left:
-            left_speed = 0*max_speed
-            right_speed = 0.5*max_speed
+            left_speed = 0
+            right_speed = max_speed
             print("Left")
         elif straight:
-            left_speed = 0.5*max_speed
-            right_speed = 0.5*max_speed
+            left_speed = max_speed
+            right_speed = max_speed
             print("Straight")
         elif right:
-            left_speed = 0.5*max_speed
-            right_speed = 0*max_speed
+            left_speed = max_speed
+            right_speed = 0
             print("Right")
         else:
-            left_speed = 0*max_speed
+            left_speed = 0
             right_speed = max_speed
             print("Back")
 
