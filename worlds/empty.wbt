@@ -14,8 +14,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.5995414558112754 -0.76016890507598 -0.250386258647079 1.0285592354538473
-  position -0.3827769517733749 0.21281081065464505 0.4253045618741377
+  orientation -0.8461672388667071 -0.48798129294081694 -0.21418511061346437 0.9847141687023749
+  position -0.30002016052900954 0.35073157197007887 0.5215644633174278
 }
 TexturedBackground {
 }
@@ -125,7 +125,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.05 0.039 0
-        rotation -2.4334632652640407e-17 2.4315262044258753e-17 1 1.57
+        rotation -1.7034242856848286e-16 1.702068343098113e-16 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -142,8 +142,6 @@ Robot {
         boundingObject USE wheel
         physics Physics {
         }
-        linearVelocity -2.1522969609300908e-09 4.704723891129376e-06 -8.032446961581389e-09
-        angularVelocity -2.006798303042519e-07 4.246351161300612e-16 5.37722321082666e-08
       }
     }
     HingeJoint {
@@ -158,7 +156,7 @@ Robot {
       ]
       endPoint Solid {
         translation -0.050008 0.039 0
-        rotation 2.1894405794440543e-16 -6.18230084554111e-17 1 1.57
+        rotation 5.901776142610404e-16 -4.327610591878777e-16 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -174,8 +172,6 @@ Robot {
         boundingObject USE wheel
         physics Physics {
         }
-        linearVelocity -2.1495807110102307e-09 4.68435552635984e-06 -8.022309611105151e-09
-        angularVelocity -2.006798149715978e-07 4.2521563767326524e-16 5.377222780344056e-08
       }
     }
   ]
@@ -184,6 +180,4 @@ Robot {
   physics Physics {
   }
   controller "robotics_round_2"
-  linearVelocity -2.7419715703783685e-09 4.6460946860635544e-06 -1.0233133662891871e-08
-  angularVelocity -2.006700046386129e-07 7.71740767788464e-16 5.376959970070806e-08
 }

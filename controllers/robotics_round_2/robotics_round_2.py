@@ -23,11 +23,26 @@ if __name__ == "__main__":
     right_ir.enable(timestep)
     
     while robot.step(timestep) != -1:
-        straight_ir_value = straight_ir.getValue()
-        left_ir_value = left_ir.getValue()
-        right_ir_value = right_ir.getValue()
+        straight = straight_ir.getValue()>500
+        left = left_ir.getValue()>500
+        right = right_ir.getValue()>500
         
-        print("Left: {} Straight: {} Right: {}".format(left_ir_value,straight_ir_value,right_ir_value))
+        if left:
+            left_speed = 0.25*max_speed
+            right_speed = 0.75*max_speed
+            print("Left")
+        elif straight:
+            left_speed = 0.5*max_speed
+            right_speed = 0.5*max_speed
+            print("Straight")
+        elif right:
+            left_speed = 0.75*max_speed
+            right_speed = 0.25*max_speed
+            print("Right")
+        else:
+            left_speed = 0
+            right_speed = max_speed
+            print("Back")
 
-        left_motor.setVelocity(max_speed*0.5)
-        right_motor.setVelocity(max_speed*0.5)
+        left_motor.setVelocity(left_speed)
+        right_motor.setVelocity(right_speed)
