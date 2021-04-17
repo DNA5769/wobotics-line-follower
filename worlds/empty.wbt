@@ -14,8 +14,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.8461672388667071 -0.48798129294081694 -0.21418511061346437 0.9847141687023749
-  position -0.30002016052900954 0.35073157197007887 0.5215644633174278
+  orientation -0.9837403445859236 0.16396640603019264 0.0732799572018841 0.7601733033524174
+  position 0.2129320759630693 1.6721324293698974 1.8281955971277066
 }
 TexturedBackground {
 }
@@ -37,12 +37,12 @@ RectangleArena {
   }
 }
 Robot {
-  translation -0.14192800675859468 0.0006061442684835508 0.2589589747767459
+  translation -0.161246 0 0.267
   rotation 1.3031044416347678e-05 0.9999999997708946 -1.6982416374027285e-05 -1.3089953074008833
   children [
     DistanceSensor {
-      translation -0.03 0.02 0.042
-      rotation 0 0 1 -1.57
+      translation -0.0210021 0.02 0.022
+      rotation 0.25054991757034345 0.2507489175048735 0.9350666923677843 -1.6370953071795862
       children [
         Shape {
           appearance PBRAppearance {
@@ -50,7 +50,7 @@ Robot {
             metalness 0
           }
           geometry Box {
-            size 0.005 0.005 0.005
+            size 0.002 0.002 0.002
           }
         }
       ]
@@ -60,8 +60,8 @@ Robot {
       aperture 0.1
     }
     DistanceSensor {
-      translation 0.03 0.02 0.042
-      rotation 0 0 -1 1.57
+      translation 0.021 0.02 0.022
+      rotation 0.25054991757034345 0.2507489175048735 0.9350666923677843 -1.6370853071795866
       children [
         Shape {
           appearance PBRAppearance {
@@ -69,7 +69,7 @@ Robot {
             metalness 0
           }
           geometry Box {
-            size 0.005 0.005 0.005
+            size 0.002 0.002 0.002
           }
         }
       ]
@@ -79,8 +79,8 @@ Robot {
       aperture 0.1
     }
     DistanceSensor {
-      translation 0 0.02 0.05
-      rotation 0 0 1 -1.57
+      translation 0 0.02 0.03
+      rotation 0.4471420556928879 0.4474990557373533 0.7744730964629535 -1.822865307179586
       children [
         Shape {
           appearance PBRAppearance {
@@ -88,7 +88,7 @@ Robot {
             metalness 0
           }
           geometry Box {
-            size 0.005 0.005 0.005
+            size 0.002 0.002 0.002
           }
         }
       ]
@@ -98,7 +98,7 @@ Robot {
       aperture 0.1
     }
     DEF body Transform {
-      translation 0 0.05 0
+      translation 0 0.035 0
       children [
         Shape {
           appearance PBRAppearance {
@@ -107,8 +107,8 @@ Robot {
             metalness 0
           }
           geometry Cylinder {
-            height 0.1
-            radius 0.05
+            height 0.07
+            radius 0.03
           }
         }
       ]
@@ -116,7 +116,7 @@ Robot {
     HingeJoint {
       jointParameters HingeJointParameters {
         position -4.8630524088517507e-17
-        anchor 0.05 0.039 0
+        anchor 0.033 0.0195 0
       }
       device [
         RotationalMotor {
@@ -124,8 +124,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05 0.039 0
-        rotation -1.7034242856848286e-16 1.702068343098113e-16 1 1.57
+        translation 0.033 0.0195 0
+        rotation -9.733853061056182e-16 9.726104817703523e-16 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -133,8 +133,8 @@ Robot {
               metalness 0
             }
             geometry Cylinder {
-              height 0.02
-              radius 0.04
+              height 0.005
+              radius 0.02
             }
           }
         ]
@@ -147,7 +147,7 @@ Robot {
     HingeJoint {
       jointParameters HingeJointParameters {
         position 1.236460169108222e-16
-        anchor -0.05 0.039 0
+        anchor -0.033 0.0195 0
       }
       device [
         RotationalMotor {
@@ -155,8 +155,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.050008 0.039 0
-        rotation 5.901776142610404e-16 -4.327610591878777e-16 1 1.57
+        translation -0.033 0.0195 -1.1746371606528112e-18
+        rotation 2.6319621740025358e-15 -2.4729203382164473e-15 1 1.57
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -164,8 +164,8 @@ Robot {
               metalness 0
             }
             geometry Cylinder {
-              height 0.02
-              radius 0.04
+              height 0.005
+              radius 0.02
             }
           }
         ]
