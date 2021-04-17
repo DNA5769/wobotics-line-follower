@@ -1,0 +1,180 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "m1"
+      material2 "m2"
+      coulombFriction [
+        0
+      ]
+      bounce 0
+      bounceVelocity 0
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.9139253093331989 0.39989933107709574 0.0694338099509763 0.23677305160412931
+  position 0.10866029842386063 0.21716036752018691 0.6508005448798605
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.00776461 0 -0.0389779
+  rotation 0 1 0 0.261799
+  contactMaterial "m2"
+  floorSize 2 1
+  floorTileSize 2 1
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/Neeraj/Documents/project_working/protos/Arena_LineFollower.png"
+      ]
+    }
+    metalness 0
+  }
+}
+Robot {
+  translation 0 0 -0.1
+  children [
+    DistanceSensor {
+      translation -0.03 0.02 0.06
+      rotation 0 0 1 -1.57
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      name "ir2"
+      type "infra-red"
+      numberOfRays 10
+      aperture 0.1
+    }
+    DistanceSensor {
+      translation 0.03 0.02 0.06
+      rotation 0 0 1 -1.57
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      name "ir1"
+      type "infra-red"
+      numberOfRays 10
+      aperture 0.1
+    }
+    DistanceSensor {
+      translation 0 0.02 0.06
+      rotation 0 0 1 -1.57
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      name "iro"
+      type "infra-red"
+      numberOfRays 10
+      aperture 0.1
+    }
+    DEF body Transform {
+      translation 0 0.05 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.7 0.5 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.05
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.05 0.039 0
+      }
+      device [
+        RotationalMotor {
+          name "motor2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.039 0
+        rotation 0 0 1 1.57
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor -0.05 0.039 0
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint Solid {
+        translation -0.050008 0.039 0
+        rotation 1.570717985582996e-16 0 1 1.57
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics Physics {
+        }
+      }
+    }
+  ]
+  contactMaterial "m1"
+  boundingObject USE body
+  physics Physics {
+  }
+  controller "robotics_round_2"
+}
