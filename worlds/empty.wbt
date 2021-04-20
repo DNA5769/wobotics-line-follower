@@ -14,8 +14,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.9923240464606665 0.12173201987360914 0.021778479134691556 5.740919889644959
-  position -0.3719068812586064 0.9029127328787308 1.7122492086054448
+  orientation 0.9570588713012732 -0.26411045516574955 -0.1195156238140998 5.453914307617525
+  position 0.501010962444602 2.006435525011685 1.88714671038
 }
 TexturedBackground {
 }
@@ -151,7 +151,7 @@ Robot {
       children [
         Shape {
           appearance PBRAppearance {
-            baseColor 0.7 0.5 1
+            baseColor 1 0 0
             roughness 1
             metalness 0
           }
@@ -178,6 +178,7 @@ Robot {
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
+              baseColor 0 0 1
               roughness 1
               metalness 0
             }
@@ -204,11 +205,12 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.033 0.0195 -3.5094377928013726e-53
-        rotation 0.2493650641569831 -0.24916656709845708 0.9358061159333988 1.6363000714007965
+        translation -0.033 0.0195 -1.542609601573903e-54
+        rotation 0.24936506415698304 -0.24916656709845658 0.9358061159333988 1.6363000714007965
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
+              baseColor 0 0 1
               roughness 1
               metalness 0
             }
