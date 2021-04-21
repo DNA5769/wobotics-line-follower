@@ -128,7 +128,7 @@ if __name__ == "__main__":
             dispatch(state, { 'type': 'B' })
 
         # Mostly for debugging purposes but helps us to see the values of each IR sensor in the console
-        if counter != 0: print(f'Left: {left_ir.getValue()} Straight: {straight_ir.getValue()} Right: {right_ir.getValue()} Top: {top_ir.getValue()}')
+        if counter != 1: print(f'Left: {left_ir.getValue()} Straight: {straight_ir.getValue()} Right: {right_ir.getValue()} Top: {top_ir.getValue()}')
         
         # Setting the speed of the left and right motor from our state
         left_motor.setVelocity(state['left_speed'])
