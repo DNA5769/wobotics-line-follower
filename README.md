@@ -3,7 +3,7 @@
 This line follower robot was made by us, **Team Wobotics**, for the Line Follower Contest conducted by the [Robotics Club](https://www.facebook.com/avishkar.robotics) of our college, [MNNIT](http://www.mnnit.ac.in/) using [Webots](https://cyberbotics.com/).
 
 ## Team Wobotics
-- [Shruti Bhateja](https://github.com/codewithshruti)
+- [Shruti Bhateja](https://github.com/ShrutisLegion)
 - [Neeraj Chatterjee](https://github.com/NeerajChatterjee)
 - [Varnik Sahni](https://github.com/varniksahni)
 - [Dennis Thomas](https://github.com/DNA5769)
