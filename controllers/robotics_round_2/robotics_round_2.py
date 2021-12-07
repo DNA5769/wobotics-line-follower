@@ -1,11 +1,13 @@
 """Controller for our Robot"""
-__author__ = "Neeraj Chatterjee and Dennis Thomas" 
+__author__ = "Neeraj Chatterjee, Dennis Thomas and Shruti Bhateja" 
 
 from controller import Robot
 
 # Created instance of Robot class which will help us interact with the environment
 robot = Robot()
 
+# Intialising the variables with the default values
+# time step is kept 32 as it's the average and suitable value
 timestep = 32
 max_speed = 10
 max_ir = 1000
@@ -43,6 +45,7 @@ state = {
     'right_speed': 0.0
 }
 
+# Funtion dispatch that takes 2 arguments, namely: state and action.
 def dispatch(state, action):
     """Function to make changes in the state
 
